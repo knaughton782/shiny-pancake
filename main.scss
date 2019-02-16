@@ -1,0 +1,133 @@
+//variables to setup basic size and shape of the card and pips
+$card-width: 40vw;
+$card-height: $card-width*1.4;
+$font-size-number: $card-width * 0.1;
+$icon-size: $card-width / 5;
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+//styles to draw a basic outline of a card
+.card {
+    border: 1px solid grey;
+    height: $card-height;
+    width: $card-width;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 2px 2px 4px grey;
+}
+
+//because it is a card front we want a bit of extra padding
+.card-front {
+    padding: .5em;
+}
+
+//set icon size
+.icon {
+    width: $icon-size;
+    height: $icon-size;
+}
+
+.number {
+    text-align: center;
+    font-size: $font-size-number;
+    //an icon that is part of a number should be half the normal size
+    & > .icon {
+        width: $icon-size * .5;
+        height: $icon-size *.5;
+    }
+}
+
+//rotate bottom pips 180deg
+.rotate {
+    transform: rotate(180deg);
+}
+
+@supports  (display: grid) {
+    // flexbox code
+
+    .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    }
+   
+    .cell2, .cell3, .cell4, .cell5, .cell6, .cell7, .cell8 {
+    display: flex;
+    // height: 70%;
+    width: 50%;
+    margin-top: 3%;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .cell1, .cell9 {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .cell9 {
+        justify-content: flex-end;
+    }
+}
+
+
+@supports (display: grid) {
+    //grid code
+    .row {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .cell1 {
+        // background-color: purple;
+        grid-column: 1 / 2;
+    }
+    .cell2 {
+        // background-color: green;
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+    }
+    .cell3 {
+        // background-color: goldenrod;
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        
+    }
+    .cell4 {
+        // background-color: magenta;
+        grid-column: 4 / 5;
+        grid-row: 3 / 4;
+    }
+    .cell5 {
+        // background-color: maroon;
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+    }
+    .cell6 {
+        // background-color: orange;
+        grid-column: 4 / 5;
+        grid-row: 4 / 5;
+    }
+    .cell7 {
+        // background-color: fuchsia;
+        grid-column: 2 / 3;
+        grid-row: 5 / 6;
+    }
+    .cell8 {
+        // background-color: olivedrab;
+        grid-column: 4 / 5;
+        grid-row: 5 / 6;
+    }
+    .cell9 {
+        // background-color: violet;
+        grid-column: 5 / 6;
+        grid-row: 6 / 7;
+    }
+}

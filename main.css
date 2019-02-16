@@ -1,0 +1,116 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  border: 1px solid grey;
+  height: 56vw;
+  width: 40vw;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 2px 2px 4px grey;
+}
+
+.card-front {
+  padding: 0.5em;
+}
+
+.icon {
+  width: 8vw;
+  height: 8vw;
+}
+
+.number {
+  text-align: center;
+  font-size: 4vw;
+}
+.number > .icon {
+  width: 4vw;
+  height: 4vw;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+@supports (display: grid) {
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .cell2, .cell3, .cell4, .cell5, .cell6, .cell7, .cell8 {
+    display: flex;
+    width: 50%;
+    margin-top: 3%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cell1, .cell9 {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .cell9 {
+    justify-content: flex-end;
+  }
+}
+@supports (display: grid) {
+  .row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .cell1 {
+    grid-column: 1/2;
+  }
+
+  .cell2 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+
+  .cell3 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+
+  .cell4 {
+    grid-column: 4/5;
+    grid-row: 3/4;
+  }
+
+  .cell5 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+
+  .cell6 {
+    grid-column: 4/5;
+    grid-row: 4/5;
+  }
+
+  .cell7 {
+    grid-column: 2/3;
+    grid-row: 5/6;
+  }
+
+  .cell8 {
+    grid-column: 4/5;
+    grid-row: 5/6;
+  }
+
+  .cell9 {
+    grid-column: 5/6;
+    grid-row: 6/7;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
