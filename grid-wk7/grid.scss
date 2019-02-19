@@ -56,33 +56,73 @@ flex-direction: row;
 flex-wrap: wrap;
 }
 
-.cell2, .cell3, .cell4, .cell5, .cell6, .cell7, .cell8 {
-display: flex;
-width: 50%;
-margin-top: 3%;
-justify-content: center;
-align-items: center;
+.cell {
+    flex: 1; // all the same height regardless of content
+    text-align: center;
 }
 
-.cell1, .cell9 {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
+.col-1 {
+    flex: 0 0 12.5%;
 }
 
+.col-2 {
+    flex: 0 0 25%;
+}
+.col-8 {
+    flex: 0 0 100%;
+}
+
+.offset-1 {
+    margin-left: 12.5%;
+}
+.offset-2 {
+    margin-left: 25%;
+}
+
+// .cell2, .cell3, .cell4, .cell5, .cell6, .cell7, .cell8 {
+// display: flex;
+// width: 50%;
+// margin-top: 3%;
+// justify-content: center;
+// align-items: center;
+// }
+
+// .cell1, .cell9 {
+//     display: flex;
+//     flex-direction: column;
+//     margin: 0;
+// }
+
+// .cell9 {
+//     justify-content: flex-end;
+// }
+
+.cell1 {
+background-color: purple;
+}
+.cell2 {
+background-color: green;
+}
+.cell3 {
+background-color: goldenrod;
+}
+.cell4 {
+background-color: magenta;
+}
+.cell5 {
+    background-color: maroon;
+}
+.cell6 {
+background-color: orange;
+}
+.cell7 {
+background-color: fuchsia;
+}
+.cell8 {
+background-color: olivedrab;
+}
 .cell9 {
-    justify-content: flex-end;
+background-color: violet;
 }
-
-// background-color: purple;
-// background-color: green;
-// background-color: goldenrod;
-// background-color: magenta;
-// background-color: maroon;
-// background-color: orange;
-// background-color: fuchsia;
-// background-color: olivedrab;
-// background-color: violet;
-
 
 
