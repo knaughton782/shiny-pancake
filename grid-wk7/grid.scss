@@ -48,86 +48,41 @@ $icon-size: $card-width / 5;
     transform: rotate(180deg);
 }
 
-@supports  (display: grid) {
-    // flexbox code
+// flexbox code
 
-    .row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    }
-   
-    .cell2, .cell3, .cell4, .cell5, .cell6, .cell7, .cell8 {
-    display: flex;
-    // height: 70%;
-    width: 50%;
-    margin-top: 3%;
-    justify-content: center;
-    align-items: center;
-    }
-
-    .cell1, .cell9 {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-    }
-
-    .cell9 {
-        justify-content: flex-end;
-    }
+.row {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
 }
 
-
-@supports (display: grid) {
-    //grid code
-    .row {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-    }
-
-    .cell1 {
-        // background-color: purple;
-        grid-column: 1 / 2;
-    }
-    .cell2 {
-        // background-color: green;
-        grid-column: 3 / 4;
-        grid-row: 2 / 3;
-    }
-    .cell3 {
-        // background-color: goldenrod;
-        grid-column: 2 / 3;
-        grid-row: 3 / 4;
-        
-    }
-    .cell4 {
-        // background-color: magenta;
-        grid-column: 4 / 5;
-        grid-row: 3 / 4;
-    }
-    .cell5 {
-        // background-color: maroon;
-        grid-column: 2 / 3;
-        grid-row: 4 / 5;
-    }
-    .cell6 {
-        // background-color: orange;
-        grid-column: 4 / 5;
-        grid-row: 4 / 5;
-    }
-    .cell7 {
-        // background-color: fuchsia;
-        grid-column: 2 / 3;
-        grid-row: 5 / 6;
-    }
-    .cell8 {
-        // background-color: olivedrab;
-        grid-column: 4 / 5;
-        grid-row: 5 / 6;
-    }
-    .cell9 {
-        // background-color: violet;
-        grid-column: 5 / 6;
-        grid-row: 6 / 7;
-    }
+.cell2, .cell3, .cell4, .cell5, .cell6, .cell7, .cell8 {
+display: flex;
+width: 50%;
+margin-top: 3%;
+justify-content: center;
+align-items: center;
 }
+
+.cell1, .cell9 {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.cell9 {
+    justify-content: flex-end;
+}
+
+// background-color: purple;
+// background-color: green;
+// background-color: goldenrod;
+// background-color: magenta;
+// background-color: maroon;
+// background-color: orange;
+// background-color: fuchsia;
+// background-color: olivedrab;
+// background-color: violet;
+
+
+
